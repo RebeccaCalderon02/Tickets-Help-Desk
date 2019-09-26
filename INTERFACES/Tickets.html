@@ -1,0 +1,570 @@
+<DOCTYPE html>
+<html>
+  <head>
+
+ <style>
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+}
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#0593A5;
+border-right:1px solid #e5e5e5;
+position:fixed;
+top:8px;
+bottom:0;
+height:100%;
+left:0;
+width:30px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#000;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #EDEDED;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+.hdr{
+    background: #9A9A9A
+;
+
+}
+
+.lbl{
+    text-align: left;
+}
+
+#div{
+    background-color: #000;
+}
+
+#user{
+    text-align: center;
+}
+
+#main-header {
+    background: #333;
+    color: white;
+    height: 80px;
+    margin-left: 22px;
+    margin-top: 0;
+    position: fixed;
+    width: -webkit-fill-available;
+}   
+    #main-header a {
+        color: white;
+    }
+ 
+
+#logo-header {
+    float: left;
+    padding: 15px 0 0 20px;
+    text-decoration: none;
+}
+    #logo-header:hover {
+        color: #0b76a6;
+    }
+    
+    #logo-header .site-name {
+        display: block;
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+    
+    #logo-header .site-desc {
+        display: block;
+        font-weight: 300;
+        font-size: 0.8em;
+        color: #999;
+    }
+    
+ 
+
+nav {
+    float: right;
+}
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        padding-right: 20px;
+    }
+    
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+        }
+            
+            nav ul li a {
+                display: block;
+                padding: 0 10px;
+                text-decoration: none;
+            }
+            
+                nav ul li a:hover {
+                    background: #0b76a6;
+                }
+
+#TP{
+    background-color: #fff;
+    width: 250px;
+    height: 150px;
+    border: 20px;
+    border-radius: 0px;
+    top: 100;
+    left: 100;
+    border-color: thistle;
+    position: fixed;
+    font-size: 22px;
+    font-family:fantasy;
+    text-align: center;
+
+}
+
+#P{
+   background-color: #fff;
+    width: 250px;
+    height: 150px;
+    border: 20px;
+    border-radius: 0px;
+    top: 100;
+    left: 400;
+    border-color: thistle;
+    position: fixed; 
+    font-size: 22px;
+    font-family:fantasy;
+    text-align: center;
+}
+
+#C{
+    background-color: #fff;
+    width: 250px;
+    height: 150px;
+    border: 20px;
+    border-radius: 0px;
+    top: 100;
+    left: 700;
+    border-color: thistle;
+    position: fixed; 
+    text-align: center;
+    font-size: 22px;
+    font-family:fantasy;
+}
+
+#U{
+    background-color: #fff;
+    width: 250px;
+    height: 150px;
+    border: 20px;
+    border-radius: 0px;
+    top: 100;
+    left: 1000;
+    border-color: thistle;
+    position: fixed; 
+    font-size: 22px;
+    font-family:fantasy;
+    text-align: center;
+}
+
+#F{
+    background-color: #fff;
+    width: 320px;
+    height: 320px;
+    border: 20px;
+    border-radius: 0px;
+    top: 270;
+    left: 100;
+    border-color: thistle;
+    position: fixed; 
+    font-size: 22px;
+    font-family:fantasy;
+    text-align: center;
+}
+
+#Mtxt{
+    margin-left: 20px;
+}
+
+#IP{
+    background-color: #fff;
+    width: 780px;
+    height: 355px;
+    border: 20px;
+    top: 270;
+    left: 470;
+    border-color: thistle;
+    position: fixed; 
+    font-size: 20px;
+    font-family:fantasy;
+    text-align: left;
+}
+
+#IPII{
+    text-align: right;
+    width: 600px;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+#IPIII{
+    text-align: right;
+    width: 600px;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+#perfil{
+    width: 320px;
+    height: 35px;
+    background-color: #0593A5;
+}
+
+#AD{
+    width: 150px;
+    height: 35px;
+    background-color: #0593A5;
+    margin-top: 16px;
+    width: 780px;
+}
+
+
+.botones {
+  width: 100%;
+  text-align: center;
+}
+
+#boton1 {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  
+  position: relative;
+  border: 2px solid #318aac;
+  outline: 1px solid;
+  outline-color: rgba(49, 138, 172, 0.4);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 320px;
+  height: 35px;
+  background-color: #0593A5;
+}
+#boton1:hover {
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+  border-shadow: 
+}
+
+#boton2 {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  
+  position: relative;
+  border: 2px solid #318aac;
+  outline: 1px solid;
+  outline-color: rgba(49, 138, 172, 0.4);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  height: 35px;
+  background-color: #0593A5;
+  margin-top: 16px;
+  width: 780px;
+}
+#boton2:hover {
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+  border-shadow: 
+}
+/*-------------------------------------------------------------------------*/
+
+ </style>
+  </head>
+  <header id="hdr">
+    <!--<img src="..\images\PROPUESTA 14.png">-->
+    
+  <header id="main-header">
+        
+        <a id="logo-header" href="#">
+            <span class="site-name"><img width="135px" src="C:\xampp\htdocs\SystinetHelpDesk\images\PROPUESTA 14.png"></span>
+            <!--<span class="site-desc">Help Desk<span>-->
+        </a>
+ 
+        <nav>
+            <ul>
+                <li><a href="..\INTERFACES\index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="..\INTERFACES\LOGIN.html">Logout</a></li>
+            </ul>
+        </nav>
+ 
+    </header>
+ 
+    
+    <section id="main-content">
+    
+<article>
+  <body>
+    <div class="area"></div>
+
+    <nav class="main-menu">
+        <!--<img id="user" width="100px"src="https://png.pngtree.com/svg/20170602/user_circle_1048392.png">-->
+            <ul>
+                <li class="has-subnav">
+                    <a href="#">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            <img width="20px" src="https://icon-library.net/images/ticket-icon-png/ticket-icon-png-0.jpg">
+                            <label><b>&nbsp;&nbsp;TICKETS</b></label>
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            <img width="15px" src="https://cdn.onlinewebfonts.com/svg/img_127499.png">
+                            <LABEL><b>&nbsp;&nbsp;PROYECTOS</b></LABEL>
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                            <img width="15px" src="http://download.seaicons.com/icons/icons8/windows-8/512/Data-View-Details-icon.png">
+                            <label><b>&nbsp;&nbsp;CATEGORIAS</b></label>
+                        </span>
+                    </a>
+                   
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            <img width="15px" src="https://image.flaticon.com/icons/png/512/175/175297.png">
+                            <label><b>&nbsp;&nbsp;REPORTES</b></label>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                          <img width="20px" src="http://simpleicon.com/wp-content/uploads/users.png"> 
+                          <LABEL><b>&nbsp;&nbsp;USUARIOS</b></LABEL>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                   <a href="https://www.google.com/maps/place/SystiNET/@19.975884,-102.289959,16z/data=!4m5!3m4!1s0x0:0x82bd75ea9e6f9488!8m2!3d19.9758838!4d-102.2899588?hl=es">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            <img width="15px" src="https://image.flaticon.com/icons/png/512/104/104106.png">
+                            <label><b>&nbsp;&nbsp;MAPS</b></label>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                   <a href="#">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                            <img width="15px" src="https://png.pngtree.com/svg/20160606/about_us_424024.png">
+                            <LABEL><b>&nbsp;&nbsp;ABOUT US</b></LABEL> 
+                        </span>
+                    </a>
+                </li>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            <img width="15px" src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/logout_close_sign_out_exit_access-512.png">
+                            <label><b>&nbsp;&nbsp;LOGOUT</b></label>
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+
+        <div>
+            <div id="TP">
+                <img width="75" flost="right" src="https://icon-library.net/images/ticket-icon-png/ticket-icon-png-0.jpg"><br><br>
+                <LABEL>Tickets Pendientes</LABEL>
+            </div>
+
+            <div id="P">
+                <img width="75" src="https://cdn.onlinewebfonts.com/svg/img_127499.png"><br><br>
+                <LABEL>Proyectos</LABEL>
+            </div>
+
+            <div id="C">
+                <img width="75" src="http://download.seaicons.com/icons/icons8/windows-8/512/Data-View-Details-icon.png"><br><br>
+                <LABEL>Categorias</LABEL>
+            </div>
+
+            <div id="U">
+                <img width="75" src="http://simpleicon.com/wp-content/uploads/users.png"><br><br>
+                <LABEL>Usuarios</LABEL>
+            </div>
+
+
+            <div id="F">
+            <img width="320" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrc2XoRoQ5Xrf6QtG_Q5EFozQhyg2tWzEOBC4l1Sjm3hvpsCsf">
+            
+            <section class=botones>
+                <button id="boton1">Cambiar foto de perfil</button>
+                    <!--<span class="boton1">Cambiar Foto de Perfil</span>-->  
+                </section>
+
+        <div id="IP">
+            <label id="Mtxt">Información Personal</label><br>
+                <div id="IPII">
+                    <hr width="730"/>
+                    Nombre&nbsp;&nbsp;<input id="nom" type="text" size="40"><br>
+                    <br>
+                    Correo&nbsp;&nbsp;<input id="cor" type="text" size="40"><br>
+                    <br>
+                    <br>
+                </div>
+        <label id="Mtxt">Cambiar Contraseña</label><br>
+            <div id="IPIII">
+                <hr width="730"/>
+                Contraseña Antigua&nbsp;&nbsp;<input id="ConAnt" type="text" size="40"><br>
+                <br>
+                Nueva Contraseña&nbsp;&nbsp;<input id="NvaCon" type="text" size="40"><br>
+                <br>
+                Confirmar Contraseña Nueva&nbsp;&nbsp;<input id="CCN" type="text" size="40"><br>
+             
+            </div>
+
+            <section class=botones>
+                <button id="boton2">Actualizar Datos</button> 
+                </section>
+           
+        </div>
+ 
+        </div>
+
+
+  </body>
+    </html>
